@@ -1,0 +1,28 @@
+
+    /* Fixed dimensions are essential for PageFlip's physics calculations */
+    
+    /* Container size for a two-page spread (Desktop view) */
+    .flip-book-container {
+      width: 820px;
+      height: 520px;
+      min-height: 520px;
+    }
+
+    /* Individual page dimensions, required by PageFlip configuration */
+    .page {
+      width: 400px;
+      height: 500px;
+      box-sizing: border-box;
+      transition: opacity 0.5s;
+    }
+
+    /* Responsive adjustments: Force single-page view on narrow screens */
+    @media (max-width: 850px) {
+      .flip-book-container {
+        width: 100%;
+        max-width: 420px; 
+        height: 60vh;
+        min-height: 400px;
+        transform: scale(1);
+      }
+    }
